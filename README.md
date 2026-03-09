@@ -1,70 +1,209 @@
-# Getting Started with Create React App
+# 🚗 VERTULI  
+### Interaktywna aplikacja do filtrowania ofert samochodów
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Filtry VERTULI](./screenshots/filter-panel.png)
 
-## Available Scripts
+**VERTULI** to nowoczesna aplikacja webowa zbudowana w **React 18** z wykorzystaniem **Material UI 5**, umożliwiająca wygodne przeglądanie, filtrowanie oraz sortowanie ofert samochodów.
 
-In the project directory, you can run:
+Projekt demonstruje podejście **funkcyjne do przetwarzania danych**, optymalizację renderowania przy użyciu **React Hooks** oraz czytelny podział logiki aplikacji.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# ✨ Funkcjonalności
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔎 Wyszukiwanie
+- wyszukiwanie tekstowe po **marce lub modelu samochodu**
 
-### `npm test`
+### 🎛️ Zaawansowane filtry
+- **Marka samochodu**
+- **Typ paliwa**
+  - Benzyna
+  - Diesel
+  - Elektryk
+  - Hybryda
+- **Zakres ceny**
+- **Zakres rocznika**
+- **Minimalna moc silnika (KM)**
+- **Tylko dostępne od ręki** (checkbox)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📊 Sortowanie wyników
+Możliwość sortowania według:
 
-### `npm run build`
+- ceny
+- mocy
+- rocznika
+- nazwy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+z opcją:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- rosnąco **ASC**
+- malejąco **DESC**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📈 Statystyki w czasie rzeczywistym
 
-### `npm run eject`
+Panel statystyk pokazuje:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- liczbę znalezionych samochodów
+- średnią cenę
+- łączną moc silników
+- najdroższy samochód
+- najmocniejszy samochód
+- podział aut według typu paliwa
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 🖥️ Podgląd aplikacji
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Filtry VERTULI](./screenshots/filter-panel.png)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 🛠️ Technologie
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Projekt wykorzystuje nowoczesny stack frontendowy:
 
-### Code Splitting
+- **React 18**
+- **Material UI 5**
+- **JavaScript (ES6+)**
+- **Programowanie funkcyjne**
+- **React Hooks**
+  - `useState`
+  - `useMemo`
+  - `useEffect`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Motyw aplikacji oparty jest na **ciemnym schemacie kolorów z fioletowymi akcentami**.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# 🧠 Architektura i podejście programistyczne
 
-### Making a Progressive Web App
+Aplikacja została zaprojektowana zgodnie z dobrymi praktykami:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Funkcje czyste
+Logika filtrowania i sortowania opiera się na **czystych funkcjach**, które:
 
-### Advanced Configuration
+- nie modyfikują danych wejściowych
+- nie posiadają efektów ubocznych
+- zwracają nową strukturę danych
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Pipeline przetwarzania danych
 
-### Deployment
+Dane są przetwarzane przy użyciu metod:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `filter`
+- `map`
+- `reduce`
 
-### `npm run build` fails to minify
+co tworzy **czytelny pipeline transformacji danych**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Optymalizacja renderowania
+
+Hook `useMemo` zapobiega zbędnym przeliczeniom podczas renderowania.
+
+---
+
+# 📁 Struktura projektu
+
+```
+src/
+├── data/
+│   └── cars.js              # baza danych samochodów
+│
+├── utils/
+│   └── filters.js           # funkcje filtrowania i sortowania
+│
+├── components/
+│   ├── Header.jsx           # nagłówek aplikacji
+│   ├── FilterPanel.jsx      # panel filtrów
+│   ├── CarCard.jsx          # karta samochodu
+│   └── StatsBar.jsx         # panel statystyk
+│
+├── theme/
+│   └── theme.js             # motyw Material UI
+│
+├── App.jsx                  # główna logika aplikacji
+└── index.js                 # punkt startowy
+```
+
+---
+
+# 🚀 Uruchomienie projektu lokalnie
+
+## Wymagania
+
+- **Node.js v16+ (LTS)**
+- **npm**
+
+---
+
+## 1️⃣ Klonowanie repozytorium
+
+```bash
+git clone https://github.com/Crosby601/VertuliCars.git
+cd VertuliCars
+```
+
+---
+
+## 2️⃣ Instalacja zależności
+
+```bash
+npm install
+```
+
+---
+
+## 3️⃣ Uruchomienie aplikacji
+
+```bash
+npm start
+```
+
+---
+
+## 4️⃣ Otwórz aplikację
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🎨 UI i design
+
+Aplikacja wykorzystuje **Material UI 5** z customowym motywem:
+
+- **fioletowe akcenty**
+- responsywny layout
+- karty prezentujące samochody
+- panel filtrów z sliderami i selectami
+
+---
+
+# 📌 Możliwe rozszerzenia
+
+Projekt można łatwo rozbudować o:
+
+- integrację z **API ogłoszeń samochodowych**
+- **paginację wyników**
+- zapis filtrów w **URL**
+- **porównywarkę samochodów**
+- **backend + baza danych**
+- deploy na **Vercel / Netlify**
+
+---
+
+# 👤 Autor
+
+GitHub  
+https://github.com/Crosby601
+
+Repozytorium projektu  
+https://github.com/Crosby601/VertuliCars
+
+Email  
+crosby@ghostcartel.pl
+
+---
+
+⭐ Jeśli projekt Ci się podoba — zostaw gwiazdkę na GitHubie.
