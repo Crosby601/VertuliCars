@@ -206,4 +206,4 @@ crosby@ghostcartel.pl
 
 ---
 
-⭐ Jeśli projekt Ci się podoba — zostaw gwiazdkę na GitHubie.
+⭐ Jeśli projekt Ci się podoba - zostaw gwiazdkę na GitHubie.
