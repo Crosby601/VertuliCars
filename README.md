@@ -1,7 +1,7 @@
 # 🚗 VERTULI  
 ### Interaktywna aplikacja do filtrowania ofert samochodów
 
-![Filtry VERTULI](./screenshots/filter-panel.png)
+![Filtry VERTULI](./screenshots/filter_panel.png)
 
 **VERTULI** to nowoczesna aplikacja webowa zbudowana w **React 18** z wykorzystaniem **Material UI 5**, umożliwiająca wygodne przeglądanie, filtrowanie oraz sortowanie ofert samochodów.
 
@@ -54,7 +54,7 @@ Panel statystyk pokazuje:
 
 # 🖥️ Podgląd aplikacji
 
-![Filtry VERTULI](./screenshots/filter-panel.png)
+![Główny ekran VERTULI](./screenshots/main_menu.png)
 
 ---
 
