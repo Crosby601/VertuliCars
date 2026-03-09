@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.idea/.name
+.idea/inspectionProfiles/Project_Default.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/vertuli-cars.iml
+package-lock.json
+package.json
+src/setupTests.js
+src/reportWebVitals.js
