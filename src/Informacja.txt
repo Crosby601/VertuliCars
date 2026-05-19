@@ -1,0 +1,8 @@
+Projekt został wrzucony także na platformę github, jest dostępny pod poniższym linkiem:
+https://github.com/Crosby601/VertuliCars
+
+Wymagania:
+- Node.js v16+ (LTS)
+- npm
+
+Załączam również PDF z opisem projektu, spis treści jest funkcjonalny
